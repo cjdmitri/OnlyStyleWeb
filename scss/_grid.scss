@@ -1,0 +1,136 @@
+﻿
+
+.grid {
+    display: grid;
+    grid-gap: $padding-general;
+    margin-bottom: $padding-general;
+}
+
+
+/*.grid-inline {
+    display: grid;
+    grid-gap: $padding-general;
+    padding: $padding-general;
+    overflow: auto;
+    grid-auto-flow: column;
+}*/
+
+.grid-small-gap {
+    grid-gap: $padding-general - 10;
+}
+
+.grid-big-gap {
+    grid-gap: $padding-general + 10;
+}
+
+.grid-gap-0 {
+    grid-gap: 0;
+}
+
+/*default. No responsive*/
+.g-1 {
+    grid-template-columns: 1fr;
+}
+
+.col-span-1 {
+    grid-column: span 1;
+}
+
+.row-span-1 {
+    grid-row: span 1;
+}
+
+@for $i from 2 through 12 {
+    .g-#{$i} {
+        grid-template-columns: repeat($i, 1fr);
+    }
+
+    .col-span-#{$i} {
+        grid-column: span $i;
+    }
+
+    .row-span-#{$i} {
+        grid-row: span $i;
+    }
+}
+
+// x small
+@media (max-width: $bp-sm - 1) {
+    .g-xsm-1 {
+        grid-template-columns: 1fr;
+    }
+
+    .col-xsm-span-1 {
+        grid-column: span 1;
+    }
+
+    .row-xsm-span-1 {
+        grid-row: span 1;
+    }
+
+    @for $i from 2 through 12 {
+        .g-xsm-#{$i} {
+            grid-template-columns: repeat($i, 1fr);
+        }
+
+        .col-xsm-span-#{$i} {
+            grid-column: span $i;
+        }
+
+        .row-xsm-span-#{$i} {
+            grid-row: span $i;
+        }
+    }
+}
+
+@each $bpname, $value in $breakpoints {
+    @media (min-width: $value) {
+        @for $i from 1 through 12 {
+            .g-#{$bpname}-#{$i} {
+                grid-template-columns: repeat($i, 1fr);
+            }
+
+            .col-#{$bpname}-span-#{$i} {
+                grid-column: span $i;
+            }
+
+            .row-#{$bpname}-span-#{$i} {
+                grid-row: span $i;
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: $bp-md) {
+    .hidden-sm {
+        display: none;
+    }
+}
+
+@media (max-width: $bp-lg) {
+    .hidden-md {
+        display: none;
+    }
+}
+
+@media (max-width: $bp-xl) {
+    .hidden-lg {
+        display: none;
+    }
+}
+
+@media (max-width: $bp-xxl) {
+    .hidden-xl {
+        display: none;
+    }
+}
+
+@media (min-width: $bp-xxl) {
+    .hidden-xxl {
+        display: none;
+    }
+}
