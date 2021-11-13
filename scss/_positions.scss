@@ -1,15 +1,15 @@
 ﻿
 
 .pos-relative {
-    position: relative !important;
+    position: relative ;
 }
 
 .pos-absolute {
-    position: absolute !important;
+    position: absolute;
 }
 
 .pos-fixed {
-    position: fixed !important;
+    position: fixed ;
     z-index: 200;
 }
 .pos-float-right{
@@ -22,16 +22,16 @@
 
 @for $i from 0 through 4{
     .pos-top-#{$i * 25} {
-        top: $i * 25 !important;
+        top: $i * 25;
     }
     .pos-right-#{$i * 25} {
-        right: $i * 25 !important;
+        right: $i * 25;
     }
     .pos-bottom-#{$i * 25} {
-        bottom: $i * 25 !important;
+        bottom: $i * 25;
     }
     .pos-left-#{$i * 25} {
-        left: $i * 25 !important;
+        left: $i * 25;
     }
 }
 
