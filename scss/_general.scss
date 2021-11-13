@@ -95,14 +95,11 @@ footer, .footer {
     border-radius: $border-radius;
 }
 
-.no-border{
-    border-width:0;
-}
 .border-rounded {
     border-radius: $border-radius !important;
 }
 
-.border-hide {
+.border-hide, .no-border {
     border-width: 0 !important;
 }
 
