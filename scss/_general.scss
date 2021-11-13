@@ -1,0 +1,146 @@
+﻿
+
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+div {
+    display:block;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    font-size: $font-size;
+    font-family: $font-general;
+    background-color: $background-color;
+    color: $text-color;
+    line-height: 1.5;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #BD93BD;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #B543B5;
+}
+
+::-webkit-scrollbar-track {
+    background: $white;
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px $white;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
+
+.container {
+    background-color: $white;
+    max-width: $container-width;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: $border-general;
+    border-right: $border-general;
+    border-bottom: $border-general;
+    padding-bottom: 80px;
+    padding-left: $padding-general;
+    padding-right: $padding-general;
+}
+
+.container-full {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    max-width:none;
+}
+
+
+footer, .footer {
+    display: block;
+    padding: $padding-general;
+    background-color: $white;
+    border-top: $border-general;
+    padding-bottom: 80px;
+}
+
+
+.shadow {
+    box-shadow: $shadow-btn-hover
+}
+
+.shadow-hide {
+    box-shadow: none;
+}
+
+.hover:hover {
+    box-shadow: $shadow-btn-hover
+}
+
+
+.bordered {
+    border: $border-general;
+    border-radius: $border-radius;
+}
+
+.no-border{
+    border-width:0;
+}
+.border-rounded {
+    border-radius: $border-radius !important;
+}
+
+.border-hide {
+    border-width: 0 !important;
+}
+
+.border-left-5{
+    border-left-style:solid;
+    border-left-width:5px;
+}
+
+.rounded {
+    border-radius: 50rem !important;
+}
+
+.list-unstyled {
+    padding-left: 0px;
+    list-style: none;
+}
+
+[hidden]{
+    display:none;
+}
+
+.w-100{
+    width:100%;
+}
+
+.overflow-auto{
+    overflow:auto;
+}
+.align-right{
+    float:right;
+}
+
+.inline-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap:wrap;
+}
+.inline-right {
+    margin-left: auto;
+}

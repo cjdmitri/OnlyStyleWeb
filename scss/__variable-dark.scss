@@ -1,0 +1,84 @@
+﻿
+//General
+$font-general: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+$font-size:15px;
+$heading-weight: 400;
+$heading-line-height: 1.2;
+$background-color: #171717;
+
+$container-width: 1200px; //Fixed container width
+$percent-color: 20%;
+$text-color: #d5d5d5;
+$text-color-invert: invert($text-color);
+$text-color-muted: transparentize($text-color,.4);
+
+//Borders
+$border-color: #5A5A5A; //general border color
+$border-radius:5px;
+$border-weight:1px;
+$border-general: $border-weight solid $border-color;
+
+//Paddings and margin
+$padding-general:15px; 
+$padding-10:10px;
+$padding-btn:6px 10px;
+$padding-btn-lg: 7px 14px;
+$padding-btn-sm: 4px 8px;
+
+
+//navbar
+$navbar-color: #252525;
+$a-color: #70a6e1;
+$a-color-hover: darken($a-color, $percent-color);
+$nav-link-color: #BBC1C8;
+$nav-link-color-active: #263241;
+$nav-link-color-hover: #8262CE;
+$shadow-color: #E0CEFF;
+$hover-color: #423754;
+$shadow-btn-hover: 0px 0px 10px 1px $shadow-color;
+
+//Form controls
+$control-border-color: #66afe9;
+$control-placeholder-color: #737D85;
+$control-disabled-color: #ECEDEF;
+
+//Breakpoints
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1200px;
+$bp-xxl: 1400px;
+$breakpoints: (sm: $bp-sm, md: $bp-md, lg: $bp-lg, xl: $bp-xl, xxl: $bp-xxl);
+
+//Colors
+$glassy:.75;
+$white: #202020;
+$primary: #644694;
+$secondary: #937bbf;
+$success: #00993d;
+$info: #006791;
+$warning: #efa31d;
+$danger: #bb7f15;
+$colors: (white: $white, primary: $primary, secondary: $secondary, success: $success, info: $info, warning: $warning, danger: $danger );
+
+//Colors light
+//$primary-light: lighten($primary, $percent-color);
+//$secondary-light: lighten($secondary, $percent-color);
+//$success-light: lighten($success, $percent-color);
+//$info-light: lighten($info, $percent-color);
+//$warning-light: lighten($warning, $percent-color);
+//$danger-light: lighten($danger, $percent-color);
+//$colors-light: ( primary-light: $primary-light, secondary-light: $secondary-light, success-light: $success-light, info-light: $info-light, warning-light: $warning-light, danger-light: $danger-light );
+
+//Colors dark
+//$primary-dark: darken($primary, $percent-color);
+//$secondary-dark: darken($secondary, $percent-color);
+//$success-dark: darken($success, $percent-color);
+//$info-dark: darken($info, $percent-color);
+//$warning-dark: darken($warning, $percent-color);
+//$danger-dark: darken($danger, $percent-color);
+//$colors-dark: ( primary-dark: $primary-dark, secondary-dark: $secondary-dark, success-dark: $success-dark, info-dark: $info-dark, warning-dark: $warning-dark, danger-dark: $danger-dark );
+
+
+
+
