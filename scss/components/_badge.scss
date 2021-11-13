@@ -1,0 +1,15 @@
+﻿
+
+.badge {
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: baseline;
+    color: white;
+    border-radius: 0;
+    font-size: .7rem;
+    background-color: darken($background-color, $percent-color);
+    text-align: center;
+    padding: 3px 10px;
+    font-weight: bold;
+    cursor: default;
+}

@@ -1,0 +1,251 @@
+﻿
+.brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar.navbar-fixed {
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
+
+.brand a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $nav-link-color;
+}
+.brand a > img {
+    max-height: 30px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.navbar {
+    background-color: $navbar-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    z-index: 200;
+    border-bottom: $border-general;
+}
+
+
+.nav-dropdown, .nav-input, .dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.nav-input{
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.nav-dropdown-full {
+    display: inline-block;
+}
+.nav-btn-dropdown,
+.nav-link {
+    background: none;
+    border: none;
+    color: $nav-link-color;
+    padding: 20px 15px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-btn-dropdown::after,
+.nav-btn-dropdown::before,
+.nav-link::after,
+.nav-link::before {
+    transition: all .5s;
+}
+
+.nav-btn-dropdown::after,
+.btn-dropdown::after {
+    content: ' \25be';
+    white-space: nowrap;
+    color: $nav-link-color;
+}
+
+
+
+.nav-btn-dropdown:hover,
+.nav-btn-dropdown:active,
+.nav-link:hover,
+.nav-link:active,
+.nav-link.active {
+    background-color: $nav-link-color-active;
+    color: $nav-link-color;
+}
+
+
+.nav-end{
+    margin-left:auto;
+}
+
+.nav-end > .nav-dropdown > .nav-dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+
+.btn-menu {
+    display: none;
+}
+
+/*Костыль для кнопки меню*/
+#btnmenu {
+    display: none;
+}
+
+/*Костыль, вместо иконки, три линии*/
+.btn-menu > i.line {
+    border-bottom: 2px solid $nav-link-color;
+    display: block;
+    margin-top: 4px;
+    width: 20px;
+}
+
+.nav-input {
+    padding: $padding-btn;
+    font-size: $font-size;
+    line-height: 1.5;
+    color: $text-color;
+    background-color: $white;
+    background-image: none;
+    border: $border-general;
+    border-radius: $border-radius;
+}
+
+.nav-input:focus {
+    border-color: $control-border-color;
+    outline: 0;
+    @include form-control-shadow();
+}
+
+
+
+@media (max-width: $bp-md) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-left, .nav-end {
+        display: none;
+    }
+    /*На маленьких экранах показываем кнопку для раскрытия меню*/
+    .btn-menu {
+        display: inline-block;
+        background: none;
+        border: none;
+        color: white;
+        padding: 20px 15px;
+        cursor: pointer;
+    }
+    /*При нажатии на костыль, показываем или скрываем меню*/
+    #btnmenu:checked ~ div.nav-left,
+    #btnmenu:checked ~ div.nav-end {
+        display: flex;
+        flex-direction: column;
+        @include animation(fade-in, .5s);
+    }
+
+    .nav-end {
+        margin-left: 0;
+    }
+    /*Делаем кнопку меню на всю ширину экрана*/
+    .nav-btn-dropdown {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-dropdown-menu {
+        display: none;
+        background-color: $white;
+        position: static;
+        padding: $padding-general;
+        border-radius: 0;
+        @include animation(fade-in, .5s);
+    }
+
+    .nav-btn-dropdown:focus ~ .nav-dropdown-menu,
+    .nav-dropdown-menu:hover {
+        display: block;
+        position: static !important;
+        border-radius: 0;
+        border-width: 0;
+    }
+    /*    .dark .nav-dropdown-menu {
+        color: $white!important;
+        background-color: $navbar-hover-dark;
+    }
+
+    .dark .nav-dropdown-menu * {
+        color: $white !important;
+    }*/
+
+
+    .nav-input {
+        margin: 0 $padding-general;
+    }
+}
+
+
+.dropdown-menu, .nav-dropdown-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: none;
+    padding: $padding-general;
+    min-width: 150px;
+    border: $border-general;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    background-color: $white;
+    z-index: 1050;
+    /*box-shadow: 0px 4px 7px 1px var(--shadow-color);*/
+    @include animation(fade-in, .5s);
+    @include dropdown-menu-shadow();
+}
+
+.dropdown-menu {
+    border-radius: $border-radius;
+    min-width: 170px;
+}
+
+
+
+.nav-btn-dropdown:focus ~ .nav-dropdown-menu,
+.btn-dropdown:focus ~ .dropdown-menu,
+.nav-dropdown-menu:hover,
+.dropdown-menu:hover {
+    display: block;
+}
+
+
+.dropdown-menu li > a,
+.nav-dropdown-menu li > a {
+    display: block;
+    padding: $padding-btn;
+    color: $text-color;
+    border-radius: $border-radius !important;
+}
+
+.dropdown-menu li > a:hover,
+.nav-dropdown-menu li > a:hover {
+    background-color: $hover-color;
+}
+
+

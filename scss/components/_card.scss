@@ -1,0 +1,23 @@
+﻿
+
+.card {
+    //position: relative;
+    display: block;
+    background-color: var(--white);
+    word-wrap: break-word;
+    border: var(--border-general);
+    border-radius: var(--border-radius);
+    /*overflow: auto;*/
+}
+
+.card-header {
+    background-color: var(--background-color);
+    border-bottom: var(--border-general);
+    padding: var(--padding-general);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.card-body {
+    padding: var(--padding-general);
+}

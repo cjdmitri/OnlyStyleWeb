@@ -1,0 +1,84 @@
+﻿
+
+.table {
+    width: 100%;
+    border: $border-general;
+    border-collapse: collapse;
+    border-radius:$border-radius;
+    overflow-x: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: $white;
+}
+
+th {
+    text-align: left;
+}
+
+/*tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+}*/
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    padding: 8px;
+    vertical-align: top;
+    border: $border-general;
+    border-left-width: 0;
+    border-right-width:0;
+}
+
+.table.bordered > thead > tr > th,
+.table.bordered > tbody > tr > th,
+.table.bordered > tfoot > tr > th,
+.table.bordered > thead > tr > td,
+.table.bordered > tbody > tr > td,
+.table.bordered > tfoot > tr > td {
+    border: $border-general;
+    border-left-width: 1px;
+    border-right-width: 1px;
+}
+
+
+.table-striped > tbody tr:nth-child(odd),
+.table-striped > tbody tr:nth-child(odd) > td > input {
+    background-color: $white;
+}
+
+.table-striped > tbody tr:nth-child(even),
+.table-striped > tbody tr:nth-child(even) > td > input {
+    background-color: darken($white, 5%);
+}
+
+
+.table-hover > tbody tr:hover {
+    background-color: $hover-color;
+}
+
+
+.table-edit > tbody>tr> td {
+    padding: 0;
+}
+
+.table-edit input {
+    border: none;
+    display: block;
+    padding: 8px;
+
+    width: 100%;
+}
+
+.table-edit input:focus,
+.table-edit input:active,
+.table-edit input:hover {
+    border-color: #66afe9;
+    outline: 0;
+    @include form-control-shadow();
+}
+
+
